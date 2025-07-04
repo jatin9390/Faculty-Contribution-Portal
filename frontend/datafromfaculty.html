@@ -1,0 +1,225 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaboration Form</title>
+    <div>
+        <a href="welcomepage.html">
+            HOMEPAGE </a>
+    </div>
+</head>
+
+<body>
+    <h1>Collaboration Form</h1>
+    <!--<form>
+        <label for="sNo">S.No</label>
+        <input type="text" id="sNo" name="sNo" placeholder="Enter serial number">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Enter title">
+
+        <label for="collaboratingAgency">Collaborating Agency</label>
+        <input type="text" id="collaboratingAgency" name="collaboratingAgency" placeholder="Enter collaborating agency">
+
+        <label for="participant">Participant</label>
+hello10        <input type="text" id="participant" name="participant" placeholder="Enter participant name">
+
+        <label for="yearOfCollaboration">Year of Collaboration</label>
+        <input type="text" id="yearOfCollaboration" name="yearOfCollaboration" placeholder="Enter year of collaboration">
+
+        <label for="duration">Duration</label>
+        <input type="text" id="duration" name="duration" placeholder="Enter duration">
+
+        <label for="natureOfActivity">Nature of Activity</label>
+        <input type="text" id="natureOfActivity" name="natureOfActivity" placeholder="Enter nature of activity">
+
+        <button type="submit">Submit</button>-->
+    <!-- <form action="http://localhost:8080/ifacdata" method="POST">
+        Enter SerialNumber : <input type="text" name="sno" placeholder="Enter serial number" required><br>
+       Enter title : <input type="text" name="title" placeholder="Enter title" required><br>
+       Enter collaborating agency : <input type="text" name="collaborating_agency" placeholder="Entercollaboratingagency" required><br>
+       Enter participant name : <input type="text" name="participant" placeholder="Enter participant name" required><br>
+       Enter year of collaboration :<input type="number" name="year" placeholder="Enter year of collaboration" required><br>
+       Enter duration : <input type="text" name="duration" placeholder="Enter duration" required><br>
+       Enter nature of activity : <input type="text" name="activity" placeholder="Enter nature of activity" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="http://localhost:8080/ifacdata">View Data</a>
+</body>
+</form>
+</body>
+
+</html> --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff; /* AliceBlue background */
+    }
+
+    /* Header (HOMEPAGE link) */
+    .header {
+      background-color: #4682b4; /* SteelBlue */
+      padding: 15px;
+    }
+    .header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Container for the form */
+    .container {
+      max-width: 600px; /* Makes it responsive */
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Page Title */
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Form styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* space between fields */
+    }
+
+    /* Label + input layout */
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .form-group label {
+      width: 200px;
+      min-width: 150px; /* ensures labels don't get too small */
+      margin-right: 10px;
+      text-align: right;
+      font-weight: bold;
+      color: #333;
+    }
+    .form-group input {
+      flex: 1;
+      min-width: 200px; /* ensures inputs have a minimum width */
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    /* Submit and View buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4682b4; /* SteelBlue */
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .btn:hover {
+      background-color: #5a9bd6; /* Slightly lighter blue on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .form-group label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with HOMEPAGE link -->
+  <div class="header">
+    <a href="welcomepage.html">HOMEPAGE</a>
+  </div>
+
+  <!-- Main container -->
+  <div class="container">
+    <h1>Data</h1>
+    <form action="http://localhost:8080/ifacdata" method="POST">
+      <!-- Serial Number -->
+      <div class="form-group">
+        <label for="sno">Enter Serial Number:</label>
+        <input type="text" id="sno" name="sno" placeholder="Enter serial number" required>
+      </div>
+
+      <!-- Title -->
+      <div class="form-group">
+        <label for="title">Enter Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter title" required>
+      </div>
+
+      <!-- Collaborating Agency -->
+      <div class="form-group">
+        <label for="collaborating_agency">Enter Collaborating Agency:</label>
+        <input type="text" id="collaborating_agency" name="collaborating_agency" placeholder="Enter collaborating agency" required>
+      </div>
+
+      <!-- Participant -->
+      <div class="form-group">
+        <label for="participant">Enter Participant Name:</label>
+        <input type="text" id="participant" name="participant" placeholder="Enter participant name" required>
+      </div>
+
+      <!-- Year of Collaboration -->
+      <div class="form-group">
+        <label for="year">Enter Year of Collaboration:</label>
+        <input type="number" id="year" name="year" placeholder="Enter year of collaboration" required>
+      </div>
+
+      <!-- Duration -->
+      <div class="form-group">
+        <label for="duration">Enter Duration:</label>
+        <input type="text" id="duration" name="duration" placeholder="Enter duration" required>
+      </div>
+
+      <!-- Nature of Activity -->
+      <div class="form-group">
+        <label for="activity">Enter Nature of Activity:</label>
+        <input type="text" id="activity" name="activity" placeholder="Enter nature of activity" required>
+      </div>
+      <!--Branch-->
+      <!-- <div class="form-group">
+        <label for="department">Department</label>
+        <input type="text" id="department" name="department" placeholder="Department" required>
+      </div> -->
+      <!-- Submit Button -->
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <!-- View Data Link -->
+    <a href="http://localhost:8080/ifacdata" class="btn">View Data</a>
+  </div>
+</body>
+</html>

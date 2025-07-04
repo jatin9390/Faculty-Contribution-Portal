@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Faculty Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: lavender;
+        }
+
+        #search {
+
+            height: 28px;
+            position: relative;
+            top: -38px;
+            left: 1100px;
+        }
+        #Down{
+            align-items: start;
+            
+
+        }
+    </style>
+
+    
+    <script>
+        document.getElementById("downloadPdf").addEventListener("click", function () {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+        
+            // Capture the table
+            html2canvas(document.querySelector("table")).then(canvas => {
+                const imgData = canvas.toDataURL("image/png");
+                const imgWidth = 190; // Adjust width
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                
+                doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+                doc.save("faculty_data.pdf");
+            });
+        });
+        </script>
+</head>
+
+<body>
+    <h2>All Faculty Data</h2>
+    <form action="http://localhost:8080/search" method="post">
+        <span id="search">
+            <input name="search" style="border-style: none" ; type="text" placeholder="Search"></input>
+            <button>Find</button>
+        </span>
+        <!-- <button id="downloadPdf" style="align-self: start;name="Down">Download</button> -->
+    </form>
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Title</th>
+            <th>Collaborating Agency</th>
+            <th>Participant</th>
+            <th>Year of Collaboration</th>
+            <th>Duration</th>
+            <th>Nature of Activity</th>
+            <!-- <th>Department</th> -->
+        </tr>
+        <% facultyData.forEach(user=> { %>
+            <tr>
+                <td>
+                    <%= user.sno %>
+                </td>
+                <td>
+                    <%= user.title %>
+                </td>
+                <td>
+                    <%= user.collaborating_agency %>
+                </td>
+                <td>
+                    <%= user.participant %>
+                </td>
+                <td>
+                    <%= user.year %>
+                </td>
+                <td>
+                    <%= user.duration %>
+                </td>
+                <td>
+                    <%= user.activity %>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+</body>
+</html>

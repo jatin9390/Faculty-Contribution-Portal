@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <div>
+        <a href="welcomepage.html">
+            HOMEPAGE </a>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Information Form</h1>
+        <form action="http://localhost:8080/studentdata" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="mailid">Email ID</label>
+            <input type="email" id="mailid" name="mailid" placeholder="Enter your email" required>
+
+            <label for="mobilenumber">Mobile Number</label>
+            <input type="tel" id="mobilenumber" name="mobilenumber" placeholder="Enter your mobile number" required>
+
+            <label for="branch">Branch</label>
+            <input type="text" id="branch" name="branch" placeholder="Enter your branch" required>
+
+            <label for="collegename">College Name</label>
+            <input type="text" id="collegename" name="collegename" placeholder="Enter your college name" required>
+
+            <label for="certificates">Certificates</label>
+            <input type="file" id="certificates" name="certificates">
+
+            <label for="companyname">Company Name</label>
+            <input type="text" id="companyname" name="companyname" placeholder="Enter company name" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

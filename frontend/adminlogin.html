@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: -150;
+        }
+        .homepage-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .homepage-link a {
+            color: #ff1493;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .homepage-link a:hover {
+            text-decoration: underline;
+        }
+        .login-container {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 20px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff69b4;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            color: #ff1493;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #logo {
+    scale: 0.2;
+    position: relative;
+    right: 448px;
+    top: -308px;
+
+}
+    </style>
+</head>
+<body>
+    <div class="homepage-link">
+        <a href="welcomepage.html">HOMEPAGE</a>
+    </div>
+    <header>
+        <div id="left-section">
+            <span> <img id="logo"  src="mvgrlogo.png">
+                <!-- <h1 id="title">Faculty Information Portal</h1> -->
+            </span>
+        </div>
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value.trim();
+        var password = document.getElementById("password").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (name === "") {
+            alert("Name cannot be empty");
+            return false;
+        }
+
+        if (password === "" || password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return false;
+        }
+
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+    <div class="login-container">
+        <h1>Admin Login Page</h1>
+        <form onsubmit="return validateForm()" method="get" action="facultydata.html">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br><br>
+<!--<form onsubmit="return validateForm()" action="your_backend_script.php" method="post">
+    <input type="text" id="name" name="name">
+    <input type="password" id="password" name="password">
+    <input type="email" id="email" name="email">
+    <button type="submit">Login</button>
+</form>-->
+            <input type="submit" name="submit" value="Login">
+            <a href="registration.html">Register</a>
+        </form>
+    </div>
+</body>
+</html>

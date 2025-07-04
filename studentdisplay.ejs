@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Submitted Information</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Branch</th>
+            <th>College</th>
+            <th>Certificates</th>
+            <th>Company</th>
+        </tr>
+        <% data.forEach(entry=> { %>
+            <tr>
+                <td>
+                    <%= entry.name %>
+                </td>
+                <td>
+                    <%= entry.mailid %>
+                </td>
+                <td>
+                    <%= entry.mobilenumber %>
+                </td>
+                <td>
+                    <%= entry.branch %>
+                </td>
+                <td>
+                    <%= entry.collegename %>
+                </td>
+                <td>
+                    <%= entry.certificates %>
+                </td>
+                <td>
+                    <%= entry.companyname %>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+</body>
+
+</html>

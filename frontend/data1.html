@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaboration Form</title>
+    <div>
+        <a href="welcomepage.html">
+            HOMEPAGE </a>
+    </div>
+</head>
+
+<body>
+    <h1>Collaboration Form</h1>
+    <!--<form>
+        <label for="sNo">S.No</label>
+        <input type="text" id="sNo" name="sNo" placeholder="Enter serial number">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Enter title">
+
+        <label for="collaboratingAgency">Collaborating Agency</label>
+        <input type="text" id="collaboratingAgency" name="collaboratingAgency" placeholder="Enter collaborating agency">
+
+        <label for="participant">Participant</label>
+hello10        <input type="text" id="participant" name="participant" placeholder="Enter participant name">
+
+        <label for="yearOfCollaboration">Year of Collaboration</label>
+        <input type="text" id="yearOfCollaboration" name="yearOfCollaboration" placeholder="Enter year of collaboration">
+
+        <label for="duration">Duration</label>
+        <input type="text" id="duration" name="duration" placeholder="Enter duration">
+
+        <label for="natureOfActivity">Nature of Activity</label>
+        <input type="text" id="natureOfActivity" name="natureOfActivity" placeholder="Enter nature of activity">
+
+        <button type="submit">Submit</button>-->
+    <form action="http://localhost:8080/data" method="POST">
+        <input type="text" name="sno" placeholder="Enter serial number" required><br>
+        <input type="text" name="title" placeholder="Enter title" required><br>
+        <input type="text" name="collaborating_agency" placeholder="Enter collaborating agency" required><br>
+        <input type="text" name="participant" placeholder="Enter participant name" required><br>
+        <input type="number" name="year" placeholder="Enter year of collaboration" required><br>
+        <input type="text" name="duration" placeholder="Enter duration" required><br>
+        <input type="text" name="activity" placeholder="Enter nature of activity" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="http://localhost:8080/facultydata">View Data</a>
+</body>
+</form>
+</body>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+        }
+        .homepage-link {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 300px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Homepage link at the top -->
+    <div class="homepage-link">
+        <a href="welcomepage.html">HOMEPAGE</a>
+    </div>
+	<script>
+    function validateAdminForm() {
+        var name = document.getElementById("name").value.trim();
+        var password = document.getElementById("password").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (name === "") {
+            alert("Name cannot be empty");
+            return false;
+        }
+
+        if (password === "" || password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return false;
+        }
+
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+    <div class="login-box">
+        <h2>Admin LOGIN PAGE</h2>
+	<form onsubmit="return validateAdminForm()" method="post" action="admin.html">
+        <form>
+            <label>Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Password:</label><br>
+            <input type="password"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <br>
+        <a href="registration.html">Register</a>
+    </div>
+
+</body>
+</html>

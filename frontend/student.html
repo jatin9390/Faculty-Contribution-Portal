@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .top-nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 60px; /* To prevent content from being hidden under the fixed navbar */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="homepage.html">HOMEPAGE</a>
+    </div>
+
+    <div class="content">
+        <h2>Viewing and Updating Data</h2>
+        <ul>
+            <li><a href="view_faculty.html">View Faculty Data</a></li>
+            <li><a href="modify_faculty.html">Modify Faculty Data</a></li>
+            <li><a href="delete_faculty.html">Delete Faculty Data</a></li>
+            <li><a href="view_internship.html">View Internship Data</a></li>
+            <li><a href="update_internship.html">Update Internship Data</a></li>
+            <li><a href="delete_internship.html">Delete Internship Data</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

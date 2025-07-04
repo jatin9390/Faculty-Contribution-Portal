@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Faculty Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: lavender;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Faculty Data</h2>
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Title</th>
+            <th>Collaborating Agency</th>
+            <th>Participant</th>
+            <th>Year of Collaboration</th>
+            <th>Duration</th>
+            <th>Nature of Activity</th>
+            <!-- <th>Department</th> -->
+        </tr>
+            <tr>
+                <td>
+                    <%= user.sno %>
+                </td>
+                <td>
+                    <%= user.title %>
+                </td>
+                <td>
+                    <%= user.collaborating_agency %>
+                </td>
+                <td>
+                    <%= user.participant %>
+                </td>
+                <td>
+                    <%= user.year %>
+                </td>
+                <td>
+                    <%= user.duration %>
+                </td>
+                <td>
+                    <%= user.activity %>
+                </td>
+            </tr>
+            
+            <!-- <a href="http://localhost:8080/plogin"><BUtton>submit</BUtton></a> -->
+    </table>
+</body>
+
+</html>
